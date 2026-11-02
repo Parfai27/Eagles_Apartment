@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#16323d"/>
+  <!-- head and neck feathers -->
+  <path d="M12 52C11 36 17 21 32 16.5c6-1.8 11.5-.8 15.5 2.5L45 31c-2.5 3.5-6.5 5.5-10.5 6.5-3 2.5-4.5 7-4 11.5l-2.5-3-1.5 4.5-2.5-4-2 4.5-2-4.5-2.5 4-1.5-4.5z" fill="#f6f1e8"/>
+  <!-- hooked beak -->
+  <path d="M46.5 19.5c4 .8 8 2.5 10 5.5 1.6 2.4 1.4 5.5-.3 8-.6-1.7-1.8-2.8-3.6-3.1L45 31c1-3.8 1.5-7.6 1.5-11.5z" fill="#c9a24b"/>
+  <!-- brow and eye -->
+  <path d="M35.5 21.5c3.5-1.2 7.5-1 11 .5" stroke="#16323d" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <circle cx="42" cy="24.5" r="1.7" fill="#16323d"/>
+  <!-- feather accents -->
+  <path d="M22 40c3-1 6-3 8-6M18 34c3-1.5 6-4 7.5-7" stroke="#c9a24b" stroke-width="1.6" stroke-linecap="round" fill="none" opacity=".7"/>
+</svg>

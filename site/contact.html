@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact &amp; booking · Eagles Apartment, Goma</title>
+  <meta name="description" content="Book your stay at Eagles Apartment, Grande Barrière, Goma. Send us your dates and we will reply with availability and prices.">
+  <meta name="theme-color" content="#16323d">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="contact">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero page-hero--short">
+      <img src="images/rooftop-corner.webp" alt="" class="page-hero__img">
+      <div class="page-hero__shade"></div>
+      <div class="container page-hero__content">
+        <p class="eyebrow eyebrow--light" data-i18n="contact.eyebrow">Contact</p>
+        <h1 data-i18n="contactPage.title">Contact &amp; booking</h1>
+        <p data-i18n="contactPage.sub">Tell us your dates, we'll take care of the rest.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact__grid">
+        <div class="contact__info">
+          <h2 data-i18n="contact.title">Book your stay</h2>
+          <p class="lead" data-i18n="contact.sub">Tell us your dates and we will get back to you quickly.</p>
+          <ul class="contact__list">
+            <li><svg><use href="#i-mail"/></svg><a href="mailto:info@eaglesapartment.com">info@eaglesapartment.com</a></li>
+            <li data-phone hidden><svg><use href="#i-phone"/></svg><a href="#" data-phone-link></a></li>
+            <li><svg><use href="#i-pin"/></svg><span>Grande Barrière, Goma<br>Nord-Kivu, RD Congo</span></li>
+          </ul>
+          <ol class="mini-steps">
+            <li><strong data-i18n="how.s1">Send us your dates</strong><span data-i18n="how.s1b"></span></li>
+            <li><strong data-i18n="how.s2">We confirm</strong><span data-i18n="how.s2b"></span></li>
+            <li><strong data-i18n="how.s3">Arrive and relax</strong><span data-i18n="how.s3b"></span></li>
+          </ol>
+        </div>
+
+        <form class="enquiry" id="enquiry" novalidate>
+          <div class="enquiry__row">
+            <label><span data-i18n="form.name">Full name</span><input name="name" required autocomplete="name"></label>
+            <label><span data-i18n="form.phone">Phone / WhatsApp</span><input name="phone" type="tel" autocomplete="tel"></label>
+          </div>
+          <label><span data-i18n="form.email">Email</span><input name="email" type="email" autocomplete="email"></label>
+          <div class="enquiry__row">
+            <label><span data-i18n="form.checkin">Check-in</span><input name="checkin" type="date" required></label>
+            <label><span data-i18n="form.checkout">Check-out</span><input name="checkout" type="date" required></label>
+          </div>
+          <div class="enquiry__row">
+            <label><span data-i18n="form.guests">Guests</span>
+              <select name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select>
+            </label>
+            <label><span data-i18n="form.apartment">Apartment</span>
+              <select name="apartment">
+                <option value="" data-i18n="form.any">Any</option>
+                <option>Classic Grey</option><option>Velvet</option><option>Emerald</option>
+              </select>
+            </label>
+          </div>
+          <label><span data-i18n="form.message">Message</span><textarea name="message" rows="4"></textarea></label>
+          <p class="enquiry__error" id="form-error" role="alert" hidden data-i18n="form.error">Please enter your name and your dates.</p>
+          <div class="enquiry__actions">
+            <button class="btn btn--gold" type="submit" value="email"><svg><use href="#i-mail"/></svg><span data-i18n="form.sendEmail">Send by email</span></button>
+            <button class="btn btn--whatsapp" type="submit" value="whatsapp" data-whatsapp hidden><svg><use href="#i-whatsapp"/></svg><span data-i18n="form.sendWa">Send on WhatsApp</span></button>
+          </div>
+          <p class="enquiry__note" data-i18n="form.note">Your email app will open with your message ready to send.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

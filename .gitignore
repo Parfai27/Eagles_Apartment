@@ -1,0 +1,8 @@
+# Original full-size photos (200 MB) – optimised copies live in site/images
+appartement Images/
+
+# Local editor / tool settings
+.claude/
+.vscode/
+.DS_Store
+Thumbs.db
