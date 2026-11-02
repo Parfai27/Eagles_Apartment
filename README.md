@@ -2,7 +2,7 @@
 
 Website for **Eagles Apartment**, furnished apartments in Grande Barrière, Goma (DR Congo), overlooking Lake Kivu.
 
-Live site: https://parfai27.github.io/Eagles_Apartment/
+Live site: https://eagles-apartment.netlify.app
 
 ## Structure
 
@@ -37,9 +37,11 @@ Then open http://localhost:5173.
 
 ## Publishing
 
-The live site is served by GitHub Pages from the `gh-pages` branch, which holds the contents of `site/`.
-After committing changes to `main`, publish them with:
+The live site is hosted on Netlify (project `eagles-apartment`). `netlify.toml` tells Netlify to publish the `site/` folder.
+After making changes, publish them with:
 
 ```bash
-git push origin `git subtree split --prefix site main`:gh-pages --force
+netlify deploy --prod
 ```
+
+(Run `netlify login` first if you are not logged in.)

@@ -3,6 +3,7 @@ appartement Images/
 
 # Local editor / tool settings
 .claude/
+.netlify/
 .vscode/
 .DS_Store
 Thumbs.db
