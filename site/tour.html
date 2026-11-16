@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D Tour · Eagles Apartment, Goma</title>
+  <meta name="description" content="Explore Eagles Apartment in 3D: rotate the building, visit the rooftop lounge over Lake Kivu and look inside a furnished apartment.">
+  <meta name="theme-color" content="#16323d">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="importmap">
+  { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  } }
+  </script>
+</head>
+<body data-page="tour">
+  <div id="site-header"></div>
+
+  <main id="main" class="tour-page">
+    <section class="container tour-page__head">
+      <div>
+        <p class="eyebrow" data-i18n="tour.eyebrow">3D tour</p>
+        <h1 data-i18n="tour.title">Explore the building in 3D</h1>
+      </div>
+      <p class="lead" data-i18n="tour.sub">Rotate, zoom and click the gold points to discover Eagles Apartment.</p>
+    </section>
+
+    <section class="container">
+      <div class="tour3d tour3d--full" data-tour3d="full">
+        <div class="tour3d__view">
+          <div class="tour3d__stage"></div>
+          <div class="tour3d__labels"></div>
+
+          <div class="tour3d__status"><span class="tour3d__spinner"></span><span data-i18n="tour.loading">Loading 3D model…</span></div>
+          <div class="tour3d__fallback">
+            <img src="images/hero-5-sm.webp" alt="Eagles Apartment building">
+            <p data-i18n="tour.fallback">The 3D view isn't supported on this device.</p>
+          </div>
+
+          <div class="tour3d__card" hidden></div>
+          <p class="tour3d__hint" data-i18n="tour.hint">Drag to rotate · Scroll to zoom · Click a gold point</p>
+          <button type="button" class="btn btn--gold btn--sm tour3d__back" data-back>← <span data-i18n="tour.back">Back to the building</span></button>
+
+          <div class="tour3d__bar">
+            <button type="button" data-mood aria-pressed="false">
+              <svg class="tour3d__sun"><use href="#i-sun"/></svg><svg class="tour3d__moon"><use href="#i-moon"/></svg>
+              <span class="tour3d__day" data-i18n="tour.evening">Evening</span><span class="tour3d__night" data-i18n="tour.day">Day</span>
+            </button>
+            <button type="button" data-zoom-step="0.8" aria-label="Zoom in"><svg><use href="#i-plus"/></svg></button>
+            <button type="button" data-zoom-step="1.25" aria-label="Zoom out"><svg><use href="#i-minus"/></svg></button>
+            <button type="button" data-reset aria-label="Reset view"><svg><use href="#i-reset"/></svg></button>
+            <button type="button" data-fullscreen aria-label="Full screen"><svg><use href="#i-expand"/></svg></button>
+          </div>
+        </div>
+
+        <div class="tour3d__jumps">
+          <span data-i18n="tour.jump">Go to</span>
+          <button type="button" data-jump="roof" data-i18n="tour.h.roof.t">Rooftop lounge</button>
+          <button type="button" data-jump="apt" data-i18n="tour.h.apt.t">Inside an apartment</button>
+          <button type="button" data-jump="lift" data-i18n="tour.h.lift.t">Lift & glass stairwell</button>
+          <button type="button" data-jump="gate" data-i18n="tour.h.gate.t">Gated entrance & parking</button>
+          <button type="button" data-jump="lake" data-i18n="tour.h.lake.t">Lake Kivu</button>
+        </div>
+      </div>
+      <p class="tour-page__note" data-i18n="tour.note">Illustrative 3D model based on photos of the building.</p>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script type="module" src="js/tour3d.js"></script>
+</body>
+</html>

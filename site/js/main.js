@@ -10,6 +10,7 @@ const PAGES = [
   { id: "apartments", href: "apartments.html", key: "nav.apartments" },
   { id: "amenities", href: "amenities.html", key: "nav.amenities" },
   { id: "gallery", href: "gallery.html", key: "nav.gallery" },
+  { id: "tour", href: "tour.html", key: "nav.tour" },
   { id: "location", href: "location.html", key: "nav.location" },
   { id: "contact", href: "contact.html", key: "nav.contact" }
 ];
@@ -74,7 +75,14 @@ const ICONS = {
   whatsapp: '<path d="M4 20l1.3-4A8 8 0 1112 20a8 8 0 01-4-1.1L4 20z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 1c-1-.5-2-1.5-2.5-2.5l1-1-1-2L9 9.5z"/>',
   plane: '<path d="M10.5 13.5L3 11l1.5-1.5 8 1 4-4a2 2 0 013 3l-4 4 1 8L15 23l-2.5-7.5L9 19v3l-1.5 1L6 19l-4-1.5L3 16h3z"/>',
   border: '<path d="M4 21V4M4 4h12l-2 4 2 4H4M20 21H2"/>',
-  car: '<path d="M5 17h14v-5l-2-5H7l-2 5v5zM5 17v2M19 17v2M5 12h14"/><circle cx="8" cy="14.5" r="1"/><circle cx="16" cy="14.5" r="1"/>'
+  car: '<path d="M5 17h14v-5l-2-5H7l-2 5v5zM5 17v2M19 17v2M5 12h14"/><circle cx="8" cy="14.5" r="1"/><circle cx="16" cy="14.5" r="1"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+  moon: '<path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
+  minus: '<path d="M5 12h14"/>',
+  reset: '<path d="M4 12a8 8 0 108-8 8 8 0 00-5.7 2.3L4 9M4 4v5h5"/>',
+  expand: '<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>',
+  cube: '<path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3zM12 12l8-4.5M12 12v9M12 12L4 7.5"/>'
 };
 
 // ---- Shared header, footer and overlays ----
@@ -151,6 +159,7 @@ renderLayout();
 // ---- Language ----
 let lang = "en";
 const t = key => (I18N[lang] && I18N[lang][key]) || I18N.en[key] || "";
+window.siteT = t;  // used by the 3D tour module
 
 function setLang(next) {
   lang = I18N[next] ? next : "en";
